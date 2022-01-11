@@ -35,5 +35,15 @@ namespace Colecoes.Helper
             //    Console.WriteLine(array[i]);
             //}
         }
+
+        public void Ordenar( int[] array)
+        {
+            Array.Sort(array);
+        }
+
+        public void Copiar(int[] arrayOrigem, int[] arrayDestino)
+        {
+            Array.Copy(arrayOrigem, arrayDestino,arrayOrigem.Length);
+        }
     }
 }
