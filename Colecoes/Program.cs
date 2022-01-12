@@ -8,19 +8,31 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            //filas
-            Queue<string> fila = new Queue<string>();
+            //pilhas
+            Stack<string> pilhaLivros = new Stack<string>();
+            pilhaLivros.Push("Jose");
+            pilhaLivros.Push("Maria");
+            pilhaLivros.Push("Heitor");
+            pilhaLivros.Push("Janaina");
 
-            fila.Enqueue("Augusto");
-            fila.Enqueue("Cecilia");
-            fila.Enqueue("Priscilla");
-            fila.Enqueue("Ione");
-
-            while (fila.Count > 0)
+            while(pilhaLivros.Count > 0)
             {
-                Console.WriteLine((string)fila.Dequeue());
+                Console.WriteLine(pilhaLivros.Pop());
+                
+            }
+            //filas
+            //Queue<string> fila = new Queue<string>();
 
-            }   
+            //fila.Enqueue("Augusto");
+            //fila.Enqueue("Cecilia");
+            //fila.Enqueue("Priscilla");
+            //fila.Enqueue("Ione");
+
+            //while (fila.Count > 0)
+            //{
+            //    Console.WriteLine((string)fila.Dequeue());
+
+            //}   
             //OperacoesLista operacoesLista = new OperacoesLista();
             //List<string> estado = new List<string>();
             //estado.Add("rs");
