@@ -19,8 +19,8 @@ namespace Colecoes
 
             var numerosParesMetodo = arrayNumeros.Where(numero => numero % 2 == 0).OrderBy(numero => numero).ToList();
 
-            Console.WriteLine( string.Join(" ,", numerosParesQuerys));
-            Console.WriteLine( string.Join(" ,", numerosParesMetodo));
+            Console.WriteLine( "query" + string.Join(", ", numerosParesQuerys));
+            Console.WriteLine( "metodo + "string.Join(", ", numerosParesMetodo));
 
             ////dicionários
             //Dictionary<string,string> estados = new Dictionary<string,string>();
