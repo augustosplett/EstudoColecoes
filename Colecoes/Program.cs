@@ -8,18 +8,58 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            //pilhas
-            Stack<string> pilhaLivros = new Stack<string>();
-            pilhaLivros.Push("Jose");
-            pilhaLivros.Push("Maria");
-            pilhaLivros.Push("Heitor");
-            pilhaLivros.Push("Janaina");
+            //LINQ
+            int[] arrayNumeros = new int[5] { 131, 2222, 783, 124, 54 };
 
-            while(pilhaLivros.Count > 0)
-            {
-                Console.WriteLine(pilhaLivros.Pop());
-                
-            }
+            var numerosParesQuerys = 
+                from numero in arrayNumeros
+                where numero % 2 == 0
+                orderby numero
+                select numero;
+
+            var numerosParesMetodo = arrayNumeros.Where(numero => numero % 2 == 0).OrderBy(numero => numero).ToList();
+
+            Console.WriteLine( string.Join(" ,", numerosParesQuerys));
+            Console.WriteLine( string.Join(" ,", numerosParesMetodo));
+
+            ////dicionários
+            //Dictionary<string,string> estados = new Dictionary<string,string>();
+
+            //estados.Add("SP", "São Paulo");
+            //estados.Add("RS", "Rio Grande Do Sul");
+            //estados.Add("SC", "Santa Catarina");
+
+            //foreach(KeyValuePair<string,string> s in estados)
+            //{
+            //    Console.WriteLine($"CHAVE: {s.Key}, VALOR: {s.Value}");
+            //}
+
+            ////ACESSANDO DE FORMA SEGURA
+            //string valorProcurado = "MG";
+
+
+            //if (estados.TryGetValue(valorProcurado, out string estadoEncontrado)){
+
+            //    Console.WriteLine(estadoEncontrado);
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{valorProcurado} não existe no dicionario");
+            //}
+            ////pilhas
+            //Stack<string> pilhaLivros = new Stack<string>();
+            //pilhaLivros.Push("Jose");
+            //pilhaLivros.Push("Maria");
+            //pilhaLivros.Push("Heitor");
+            //pilhaLivros.Push("Janaina");
+
+            //while(pilhaLivros.Count > 0)
+            //{
+            //    Console.WriteLine(pilhaLivros.Pop());
+
+            //}
+
+
             //filas
             //Queue<string> fila = new Queue<string>();
 
